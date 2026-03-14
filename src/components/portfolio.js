@@ -87,25 +87,25 @@ const recentProjects = [
 
 const ProjectCard = ({ title, description, skills, repoUrl, liveUrl }) => {
   return (
-    <article className="flex h-full w-full flex-col justify-between rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <article className="flex h-full w-full flex-col justify-between rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
       <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-rem-blue">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rem-blue">
           Recent Project
         </p>
-        <h2 className="mt-3 text-3xl font-semibold text-gray-700">{title}</h2>
-        <p className="mt-4 text-base leading-7 text-gray-700">{description}</p>
-        <p className="mt-4 text-sm leading-6 text-gray-600">
+        <h2 className="mt-2 text-2xl font-semibold text-gray-700">{title}</h2>
+        <p className="mt-3 text-sm leading-6 text-gray-700">{description}</p>
+        <p className="mt-3 text-sm leading-6 text-gray-600">
           <span className="font-semibold text-gray-700">Focus:</span> {skills}
         </p>
       </div>
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mt-4 flex flex-wrap gap-2">
         {liveUrl ? (
           <a
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${title}. Opens in a new tab.`}
-            className="rounded-full bg-rem-blue px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+            className="rounded-full bg-rem-blue px-3 py-1.5 text-sm font-medium text-white hover:opacity-90"
           >
             View Project
           </a>
@@ -116,7 +116,7 @@ const ProjectCard = ({ title, description, skills, repoUrl, liveUrl }) => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View the GitHub repository for ${title}. Opens in a new tab.`}
-            className="rounded-full border border-rem-blue px-4 py-2 text-sm font-medium text-rem-blue hover:bg-rem-blue hover:text-white"
+            className="rounded-full border border-rem-blue px-3 py-1.5 text-sm font-medium text-rem-blue hover:bg-rem-blue hover:text-white"
           >
             GitHub Repo
           </a>
@@ -158,7 +158,7 @@ const Portfolio = () => {
             and digital experiences that make tools easier for students,
             families, and educators to use.
           </p>
-          <div className="mx-auto mt-6 grid gap-6 p-2 md:grid-cols-1 lg:grid-cols-2">
+          <div className="mx-auto mt-6 grid gap-4 p-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
             {recentProjects.map((project) => (
               <ProjectCard
                 key={project.title}
